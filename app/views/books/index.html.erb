@@ -1,0 +1,15 @@
+<h1>My Books</h1>
+<%= link_to "+ Add a book", new_book_path %>
+
+<ul>
+  <% @books.each do |book| %>
+    <li>
+      <%= link_to book.title, book_path(book) %> by <%= book.author %> (<%= book.pages %> pages)
+      <% if book.read %>
+        ✅ Read
+      <% else %>
+        📖 Not read yet
+      <% end %>
+    </li>
+  <% end %>
+</ul>

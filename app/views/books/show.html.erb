@@ -1,0 +1,7 @@
+<h1><%= @book.title %></h1>
+
+<p>Author: <%= @book.author %></p>
+<p>Pages: <%= @book.pages %></p>
+<p>Status: <%= @book.read ? "✅ Read" : "📖 Not read yet" %></p>
+
+<%= link_to "← Back to all books", "/books" %>
